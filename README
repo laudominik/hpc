@@ -1,0 +1,21 @@
+* MPI examples *
+
+** Build **
+
+$ mkdir build && cd build
+$ cmake ..
+$ make
+
+** Run **
+
+$ mpirun -np <num_processes> <file name> 
+
+Example:
+
+$ mpirun -np 4 hello
+
+
+** Create sample **
+
+create a function and then instantiate the sample as 
+SAMPLE(function_name, args)
