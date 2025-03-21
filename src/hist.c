@@ -35,7 +35,7 @@ static void hist(const int a[], int n) {
 
     } else {
         // slave
-            get_start_end(rank, workers, n, &start, &end);
+        get_start_end(rank, workers, n, &start, &end);
 
         printf("rank: %d n: %d workers: %d start: %d end:%d\n", rank, n, workers, start, end);
 
