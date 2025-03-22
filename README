@@ -1,5 +1,10 @@
 * MPI examples *
 
+** On Mac **
+$ source .env
+
+(be sure you have llvm & libomp installed, path in .env should match it)
+
 ** Build **
 
 $ mkdir build && cd build
