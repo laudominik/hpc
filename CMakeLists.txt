@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(MPI_SAMPLES C)
+project(HPC_SAMPLES C)
 
 find_package(MPI REQUIRED)
 
@@ -11,6 +11,5 @@ foreach(source_file ${SRC})
     target_include_directories(${executable_name} PRIVATE ${MPI_INCLUDE_PATH})
     target_include_directories(${executable_name} PUBLIC include/)
     target_link_libraries(${executable_name} PRIVATE MPI::MPI_C)
-
 endforeach()
 
