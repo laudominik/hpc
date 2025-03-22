@@ -18,6 +18,7 @@ typedef double(*integr_f)(double);
 static void bubblesort(int a[], int n) {
     int rank;
     int world;
+    int phase;
     MPI_Status status;
 
     MPI_Init(NULL, NULL);
