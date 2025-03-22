@@ -23,6 +23,15 @@ void barr(int rank, int world) {
 }
 
 void barr2(int rank, int world) {
+    /*
+        tree based barrier
+        1. parent waits for their children
+        2. children notify parent (and it's propagated to the root) 
+        3. children wait for parent's response
+        4. when both children are ready parent notifies both children
+
+        indexing as in heap (below)
+    */
     int node = rank + 1;
     int left = 2*node;
     int right = 2*node+1;

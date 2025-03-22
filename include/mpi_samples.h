@@ -2,8 +2,16 @@
 
 #define SAMPLE(name, ...) int main() { name(__VA_ARGS__); }
 #define P99_PROTECT(...) __VA_ARGS__ 
-#define LOG_WITH_RANK(text, ...) printf("[rank %d]:" text, rank, ##__VA_ARGS__)
 
+#ifdef DEBUG
+#define LOG_WITH_RANK(text, ...) printf("[rank %d]:" text, rank, ##__VA_ARGS__)
+#else
+#define LOG_WITH_RANK(text, ...)
+#endif
+
+
+#define IX_TO_NODE(ix) ix + 1
+#define NODE_TO_IX(node) node - 1
 
 int min(int a, int b) {
     return a > b ? b : a;
