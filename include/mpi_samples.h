@@ -2,6 +2,8 @@
 
 #define SAMPLE(name, ...) int main() { name(__VA_ARGS__); }
 #define P99_PROTECT(...) __VA_ARGS__ 
+#define LOG_WITH_RANK(text, ...) printf("[rank %d]:" text, rank, ##__VA_ARGS__)
+
 
 int min(int a, int b) {
     return a > b ? b : a;

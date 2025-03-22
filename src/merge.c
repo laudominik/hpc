@@ -9,6 +9,7 @@ int comp(const void *a, const void *b) {
 }
 
 static void msort(int a[], int n) {
+    // large buffers sort
     int rank, world;
     int start, end;
     int size;
