@@ -7,6 +7,7 @@ int min(int a, int b) {
     return a > b ? b : a;
 }
 
+// [start, end]
 void get_start_end(int rank, int workers, int size, int* start, int* end) {  
     int remainder = size % workers;
     int count = size / workers;
