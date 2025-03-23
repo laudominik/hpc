@@ -11,6 +11,16 @@ $ mkdir build && cd build
 $ cmake ..
 $ make
 
+to build cuda samples configure with
+$ cmake .. -DBUILD_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=<compute_cap>
+
+where compute cap is
+$ nvidia-smi --query-gpu=compute_cap --format=csv compute_cap
+times 10 (e.g. 5.2 * 10 = 52)
+
+e.g.
+$ cmake .. -DBUILD_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=52
+
 ** Run **
 
 $ mpirun -np <num_processes> <file name> 
